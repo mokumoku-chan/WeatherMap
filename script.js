@@ -1,4 +1,4 @@
-
+const API_KEY = 'c22440f9ca6f82135d02de4fbbee95d5'
 
 $(function(){
   $('#btn').on('click', function() {
@@ -12,6 +12,7 @@ $(function(){
       $('#humidity').text(data.main.humidity);
       $('#speed').text(data.wind.speed);
       $('#weather').text(data.weather[0].main);
+      $('#country').text(data.sys.country);
 
       $('img').attr("src","http://openweathermap.org/img/w/" + data.weather[0].icon + ".png");
       $('img').attr("alt",data.weather[0].main);
